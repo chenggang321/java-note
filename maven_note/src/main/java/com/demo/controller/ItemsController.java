@@ -7,15 +7,17 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
+import java.util.List;
+
 @Controller
 @RequestMapping("/items")
 public class ItemsController {
     @Autowired
     private ItemsService itemsService;
 
-    @RequestMapping(value = "/item")
+    @RequestMapping("/list")
     @ResponseBody
-    public Items findDetail(){
-        return null;
+    public List<Items> itemsList(){
+        return itemsService.findItemsList();
     }
 }

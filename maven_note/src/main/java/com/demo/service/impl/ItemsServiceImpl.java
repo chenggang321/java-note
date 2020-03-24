@@ -14,47 +14,9 @@ public class ItemsServiceImpl implements ItemsService {
     @Autowired
     private ItemsMapper itemsMapper;
 
-    public long countByExample(ItemsExample example) {
-        return 0;
-    }
-
-    public int deleteByExample(ItemsExample example) {
-        return 0;
-    }
-
-    public int deleteByPrimaryKey(Integer id) {
-        return 0;
-    }
-
-    public int insert(Items record) {
-        return 0;
-    }
-
-    public int insertSelective(Items record) {
-        return 0;
-    }
-
-    public List<Items> selectByExample(ItemsExample example) {
-        return null;
-    }
-
-    public Items selectByPrimaryKey(Integer id) {
-        return null;
-    }
-
-    public int updateByExampleSelective(Items record, ItemsExample example) {
-        return 0;
-    }
-
-    public int updateByExample(Items record, ItemsExample example) {
-        return 0;
-    }
-
-    public int updateByPrimaryKeySelective(Items record) {
-        return 0;
-    }
-
-    public int updateByPrimaryKey(Items record) {
-        return 0;
+    public List<Items> findItemsList() {
+        ItemsExample example = new ItemsExample();
+        List<Items> itemsList = itemsMapper.selectByExample(example);
+        return itemsList;
     }
 }
