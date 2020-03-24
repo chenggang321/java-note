@@ -12,8 +12,5 @@ public class ItemsServiceImplTest {
     public void findItemById() {
         ApplicationContext ac = new ClassPathXmlApplicationContext("applicationContext.xml");
         ItemsService itemsService = ac.getBean(ItemsService.class);
-
-        Items items = itemsService.findItemById(1);
-        System.out.println(items);
     }
 }

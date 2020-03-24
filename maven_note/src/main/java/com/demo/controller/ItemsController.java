@@ -16,7 +16,6 @@ public class ItemsController {
     @RequestMapping(value = "/item")
     @ResponseBody
     public Items findDetail(){
-        Items items = itemsService.findItemById(1);
-        return items;
+        return null;
     }
 }

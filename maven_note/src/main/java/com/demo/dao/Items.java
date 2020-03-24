@@ -4,10 +4,15 @@ import java.util.Date;
 
 public class Items {
     private Integer id;
+
     private String name;
-    private Double price;
+
+    private Float price;
+
     private String pic;
+
     private Date createtime;
+
     private String detail;
 
     public Integer getId() {
@@ -23,14 +28,14 @@ public class Items {
     }
 
     public void setName(String name) {
-        this.name = name;
+        this.name = name == null ? null : name.trim();
     }
 
-    public Double getPrice() {
+    public Float getPrice() {
         return price;
     }
 
-    public void setPrice(Double price) {
+    public void setPrice(Float price) {
         this.price = price;
     }
 
@@ -39,7 +44,7 @@ public class Items {
     }
 
     public void setPic(String pic) {
-        this.pic = pic;
+        this.pic = pic == null ? null : pic.trim();
     }
 
     public Date getCreatetime() {
@@ -55,7 +60,7 @@ public class Items {
     }
 
     public void setDetail(String detail) {
-        this.detail = detail;
+        this.detail = detail == null ? null : detail.trim();
     }
 
     @Override
