@@ -1,9 +1,9 @@
-package com.demo.service.impl;
+package com.demo.cg.service.impl;
 
-import com.demo.dao.Items;
-import com.demo.dao.ItemsExample;
-import com.demo.mapper.ItemsMapper;
-import com.demo.service.ItemsService;
+import com.demo.cg.mapper.ItemsMapper;
+import com.demo.cg.pojo.Items;
+import com.demo.cg.pojo.ItemsExample;
+import com.demo.cg.service.ItemsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -11,12 +11,13 @@ import java.util.List;
 
 @Service
 public class ItemsServiceImpl implements ItemsService {
+
     @Autowired
     private ItemsMapper itemsMapper;
 
+    @Override
     public List<Items> findItemsList() {
         ItemsExample example = new ItemsExample();
-        List<Items> itemsList = itemsMapper.selectByExample(example);
-        return itemsList;
+        return itemsMapper.selectByExample(example);
     }
 }
