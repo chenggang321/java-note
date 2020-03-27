@@ -12,10 +12,6 @@
 
     <!--maven工程要导入jar包的坐标，就必须要考虑解决jar包冲突。
           解决jar包冲突的方式一：
-
-
-
-
           第一声明优先原则：哪个jar包的坐标在靠上的位置，这个jar包就是先声明的。
           先声明的jar包坐标下的依赖包，可以优先进入项目中。
 
@@ -33,7 +29,7 @@
           -->
     <!-- 统一管理jar包版本 -->
     <properties>
-        <spring.version>5.2.5.RELEASE</spring.version>
+        <spring.version>5.0.2.RELEASE</spring.version>
         <slf4j.version>1.6.6</slf4j.version>
         <log4j.version>1.2.12</log4j.version>
         <shiro.version>1.2.3</shiro.version>
