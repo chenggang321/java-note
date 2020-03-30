@@ -16,25 +16,7 @@
 			    http://www.springframework.org/schema/mvc
 			    http://www.springframework.org/schema/mvc/spring-mvc.xsd">
 
-    <!--配置连接池-->
-    <bean id="dataSource" class="com.alibaba.druid.pool.DruidDataSource">
-        <property name="driverClassName" value="com.mysql.cj.jdbc.Driver"/>
-        <property name="url" value="jdbc:mysql:///maven"/>
-        <property name="username" value="root"/>
-        <property name="password" value="0438424142c"/>
-    </bean>
-
-    <!--配置生产SqlSession对象的工厂-->
-    <bean id="sqlSessionFactory" class="org.mybatis.spring.SqlSessionFactoryBean">
-        <property name="dataSource" ref="dataSource"/>
-        <!--扫描pojo包，给包下所有pojo对象起别名-->
-        <property name="typeAliasesPackage" value="com.demo.cg.pojo"/>
-    </bean>
-
-    <!--扫描接口包路径，生成包下所有接口的代理对象，并且放入spring容器中-->
-    <bean class="org.mybatis.spring.mapper.MapperScannerConfigurer">
-        <property name="basePackage" value="com.demo.cg.mapper"/>
-    </bean>
+    <import resource="classpath:spring/applicationContext-dao.xml"/>
 
     <!--组件扫描配置-->
     <context:component-scan base-package="com.demo.cg.service"/>

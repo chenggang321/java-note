@@ -33,7 +33,7 @@
     <!--重新指定spring配置文件的路径-->
     <context-param>
         <param-name>contextConfigLocation</param-name>
-        <param-value>classpath:/spring/applicationContext-*.xml</param-value>
+        <param-value>classpath:/spring/applicationContext.xml</param-value>
     </context-param>
 
     <!--springmvc的核心servlet-->
