@@ -7,7 +7,7 @@
     <!--TODO 注意！！！自动生成代码 要把这句放开,链接数据库-->
     <!--<properties resource="jdbc.properties"/>-->
     <!-- 指定数据连接驱动jar地址 -->
-    <classPathEntry location="src/main/resources/tools/mysql-connector-java-8.0.19.jar"/>
+    <classPathEntry location="/Users/mac/Desktop/java/tools/repo/mysql/mysql-connector-java/8.0.19/mysql-connector-java-8.0.19.jar"/>
 
     <context id="context" targetRuntime="MyBatis3">
         <commentGenerator>
