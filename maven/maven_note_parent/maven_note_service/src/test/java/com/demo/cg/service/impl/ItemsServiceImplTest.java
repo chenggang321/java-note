@@ -13,7 +13,7 @@ import java.util.List;
 import static org.junit.Assert.*;
 
 @RunWith(SpringJUnit4ClassRunner.class)
-@ContextConfiguration(locations = "classpath:/spring/applicationContext-*.xml")
+@ContextConfiguration(locations = "classpath:/spring/applicationContext-service.xml")
 public class ItemsServiceImplTest {
 
     @Autowired
