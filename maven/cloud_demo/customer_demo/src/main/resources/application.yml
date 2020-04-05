@@ -4,3 +4,12 @@ server:
 logging:
   level:
     com.demo.cg: debug
+
+spring:
+  application:
+    name: customer-demo
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://127.0.0.1:8081/eureka
