@@ -1,0 +1,16 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql:///maven?useUnicode=true&characterEncoding=utf8&useSSL=false&&serverTimezone=UTC
+    username: root
+    password: 0438424142c
+
+mybatis:
+  type-aliases-package: com.demo.cg.pojo
+
+server:
+  port: 9999
+
+logging:
+  level:
+    com.demo.cg: debug
